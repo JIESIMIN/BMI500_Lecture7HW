@@ -73,7 +73,7 @@ The following figure summarizes the individual runs and average SIR curve of ori
 | Model | Mean individual peak height (agents) | Mean individual time to peak (steps) | Average curve peak height (agents) | Average curve time to peak (steps) |
 |---|---:|---:|---:|---:|
 | Original | 89.10 | 71.60 | 81.05 | 73 |
-| Reduced movement (m = 0.5) | 78.95 | 73.85 | 72.05 | 74 |
+| Reduced movement | 78.95 | 73.85 | 72.05 | 74 |
 | Avoidance | 79.10 | 92.75 | 70.55 | 90 |
 
 ### **Discussion (Hypothesis revisited)**
