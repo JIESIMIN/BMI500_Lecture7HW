@@ -1,5 +1,5 @@
-p,q,number_of_runs,mean_peak_infected,sd_peak_infected,mean_time_to_peak,sd_time_to_peak,mean_total_ever_infected,sd_total_ever_infected,early_die_out_cutoff,early_die_out_runs,early_die_out_percent
-0.15,0.02,20,58.55,13.32,127.05,39.5,182.0,6.55,100,0,0.0
-0.15,0.04,20,19.35,10.45,70.55,53.97,84.2,48.61,100,3,15.0
-0.3,0.02,20,89.1,12.86,71.6,13.32,198.85,1.46,100,0,0.0
-0.3,0.04,20,45.05,11.14,74.65,28.74,177.2,13.16,100,0,0.0
+p,q,Avg Peak Infected,Avg Time to Peak,Avg Total Ever Infected,Early Dieout Runs,Mean SIR Std Dev
+0.15,0.02,58.55,127.05,182.0,0,15.084609655774932
+0.15,0.04,19.35,70.55,84.2,3,22.276697537194746
+0.3,0.02,89.1,71.6,198.85,0,7.083295090151556
+0.3,0.04,45.05,74.65,177.2,0,12.917064179591517
