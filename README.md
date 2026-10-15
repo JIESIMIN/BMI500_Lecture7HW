@@ -1,9 +1,11 @@
 ## **HW 2: Agent-Based Modeling of Pandemic Spread**
 Name: Rongjia (Jasmine) Zhou
+
 Email: rzhou73@emory.edu
+
 Question number: Homework 2
 
-### ** Results/answers to the discussion items**
+### **Results/answers to the discussion items**
 #### Analyze how p and q affect the infection peak, the time to the peak, and the total number of agents ever infected. How much do individual runs differ from the average? In how many runs does the outbreak die out early?
 
 #### Which parameter controls the maximum number of simultaneously infected agents, which determines whether the healthcare system is overwhelmed?
