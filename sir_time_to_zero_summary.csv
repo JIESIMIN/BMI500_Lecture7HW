@@ -1,0 +1,4 @@
+Measure,Avg_Time_to_Zero,Runs_Reached_Zero
+avoidance,409.15,20
+original,364.75,20
+reduced,397.55,20
