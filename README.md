@@ -28,10 +28,53 @@ Question number: Homework 2
 - The maximum number of simultaneously affected agents is determined by infection probability (p), recovery probability (q), and movement probability (m). A high p, low q, and m close to 1 would cause the most severe outbreak. 
 - The peak infection count determines whether the healthcare system is overwhelmed because it creates the greatest burden. To truly determine healthcare overload, additioanl information is needed (e.g., the capacity of the hospital).
 
+#### Compare results with and without social distancing.
+| Measure | Avg Time to Zero | Runs Reached Zero |
+|---|---:|---:|
+| Avoidance | 409.15 | 20 |
+| Original | 364.75 | 20 |
+| Reduced movement | 397.55 | 20 |
+
+- **Peak infections**: With the introduction of social distancing, the peak number of infected agents decreased from 89 to 78.95 (reduced) and 79.10 (avoidance). 
+
+- **Peak timing and duration**: The time to the peak is delayed from 71.60 time steps to 73.85 (reduced) and 92.75 (avoidance). However, the average time until no infected agents remained increased from 364.75 time steps to 397.55 (reduced) and 409.15 (avoidance), suggesting social distancing can cause a longer outbreak despite having a lower peak. 
+
+- **Total number of agents infected**: The total number of infections is slightly reduced from 99.4% to 98.7% (reduced) and 97.8% (avoidance). Distancing primarily changed the outbreak's timing and peak infections rather than the total impact size. 
+
+- **Implications for real-world public health interventions**: During a pandemic, reducing contact through social distancing can reduce peak demand and delay infection peak, thereby alleviating the burden of healthcare systems. However, social distancing alone is insufficient to prevent the spread of the pandemic. 
+
 #### Discuss how stricter or more relaxed distancing affects the epidemic.
 ![Effect of movement probability on infection peak and peak timing](distancing_vs_movement_prob.png)
 
+| m | Avg Peak Infected | Avg Time to Peak |
+|---:|---:|---:|
+| 0.1 | 22.05 | 124.80 |
+| 0.3 | 64.10 | 110.05 |
+| 0.6 | 87.50 | 79.00 |
+| 1.0 | 72.60 | 78.20 |
+
 - Stricter social distancing (lower m) delays the average time to peak because it reduces transmission opportunities. It also leads to smaller infection scale and lower average peak infections. Relaxing distancing is generally associated with a faster and larger outbreak, but the increase is not consistent for all m (decreased from 87.5 for m = 0.6 to 72.6 for m = 1.0).
+
+#### Additional analysis: effect of quarantine
+![Effect of quarantine](sir_quarantine.png)
+
+| m | Avg Peak Infected | Avg Time to Peak | Avg Total Ever Infected |
+|---:|---:|---:|---:|
+| 0.1 | 56.45 | 93.05 | 183.20 |
+| 0.2 | 65.15 | 90.50 | 191.05 |
+| 0.5 | 84.75 | 70.75 | 197.75 |
+
+When m = 0.5, the quarantine measure yielded average peak infection to 84.75, which is higher compared to reduced movement (78.95) and avoidance (79.10). The average time to peak is the shortest among the three (70.75 steps). The average total ever infected did not change much. These results suggest that, under the tested conditions, restricting only infected agents’ movement was less effective at lowering and delaying the infection peak than the other two measures. One possible explanation is that susceptible agents continued moving and could still encounter infected agents, even when those infected agents stayed in place. Partial quarantine alone provided limited control of the outbreak in this model.
+
+#### Overall summary figure (most important figure for slide)
+The following figure summarizes the individual runs and average SIR curve of original, reduced movement, and avoidance model.
+![Summary](sir_models_individual_runs_and_average.png)
+
+| Model | Mean individual peak height (agents) | Mean individual time to peak (steps) | Average curve peak height (agents) | Average curve time to peak (steps) |
+|---|---:|---:|---:|---:|
+| Original | 89.10 | 71.60 | 81.05 | 73 |
+| Reduced movement (m = 0.5) | 78.95 | 73.85 | 72.05 | 74 |
+| Avoidance | 79.10 | 92.75 | 70.55 | 90 |
 
 ### **Discussion (Hypothesis revisited)**
 My hypothesis is largely supported by the experiments, although there are some minor deviations. 
@@ -43,9 +86,12 @@ My hypothesis is largely supported by the experiments, although there are some m
 - iii) The average agent-based curves broadly resembles the SIR curves. Infection generally rose and then declined, while recovered counts increased. However, the susceptible population decreased or remained constant instead of slightly rising at later time points. 
 
 ### **AI statement**
-Chat-GPT was used to complete this homework. The full chat is available at: https://chatgpt.com/share/6ad03d41-0ea0-83ea-8ecc-dec4af5bdbaf
+Chat-GPT was used to complete this homework. The full chat is available at: https://chatgpt.com/share/6ad13a30-b404-83e9-9729-821beb72081b
 
 ### **Instructions to run the code**
-Install relevant dependencies through:
+Install relevant dependencies through: python3 -m pip install -r requirements.txt
 
-python3 -m pip install -r requirements.txt
+numpy==2.2.6
+pandas==2.3.2
+matplotlib==3.10.0
+notebook==7.6.2
