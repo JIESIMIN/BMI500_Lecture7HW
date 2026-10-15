@@ -34,7 +34,13 @@ Question number: Homework 2
 - Stricter social distancing (lower m) delays the average time to peak because it reduces transmission opportunities. It also leads to smaller infection scale and lower average peak infections. Relaxing distancing is generally associated with a faster and larger outbreak, but the increase is not consistent for all m (decreased from 87.5 for m = 0.6 to 72.6 for m = 1.0).
 
 ### **Discussion (Hypothesis revisited)**
-My hypothesis is largely supported by the experiments. 
+My hypothesis is largely supported by the experiments, although there are some minor deviations. 
+
+- i) The height of the infection peak is lowered and the timing of the infection peak is delayed with reduced movement. At m = 0.5, the average peak decreased from 89.10 to 78.95, while the average time to peak increased from 71.60 to 73.85 steps. At m = 0.1, the average peak was 22.05 at step 124.80. However, less movement does not consistently lower peaks. m = 0.6 produced higher average peak than m = 1.0, which makes my initial hypothesis partially supported. 
+
+- ii) Individual runs varying slightly are partly supported. The variation between individual runs is correct, but some differences were quite substantial. The average does not always resemble individual runs. 
+
+- iii) The average agent-based curves broadly resembles the SIR curves. Infection generally rose and then declined, while recovered counts increased. However, the susceptible population decreased or remained constant instead of slightly rising at later time points. 
 
 ### **AI statement**
 Chat-GPT was used to complete this homework. The full chat is available at: https://chatgpt.com/share/6ad03d41-0ea0-83ea-8ecc-dec4af5bdbaf
